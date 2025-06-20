@@ -14,8 +14,20 @@ export async function getProducts() {
   return productsApiHandler(productsUrl);
 }
 
-async function productsApiHandler(url) {
+export async function productsApiHandler(url) {
   const { data } = await axios(url);
+
+  return data;
+}
+
+export async function getProductsByCategory(category) {
+  category = category.split(' ');
+
+  const { data } = await axios(
+    `https://dummyjson.com/products/category/${category.join(
+      '-'
+    )}?limit=12&skip=${(currentPage - 1) * 12}`
+  );
 
   return data;
 }
