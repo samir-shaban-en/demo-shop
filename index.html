@@ -5,17 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/demo-shop/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
-    <script type="module" crossorigin src="/demo-shop/assets/styles-BK7AYJoX.js"></script>
+    <script type="module" crossorigin src="/demo-shop/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/demo-shop/assets/styles-BK7AYJoX.js">
+    <link rel="modulepreload" crossorigin href="/demo-shop/assets/vendor-DGDcxXwr.js">
     <link rel="stylesheet" crossorigin href="/demo-shop/assets/styles-CwHyMCDG.css">
   </head>
   <body>
     <header class="header">
   <div class="container header__container">
-    <a class="logo" href="./index.html" aria-label="Site logo">
-      <svg class="logo__icon" width="100" height="30">
-        <use href="/demo-shop/assets/sprite-E8vg0sBb.svg#logo"></use>
-      </svg>
-    </a>
+    <a class="logo nav__link" href="./index.html" aria-label="Site logo"
+      >Demo Shop</a
+    >
 
     <form class="search-form">
       <input
@@ -63,7 +63,9 @@
       <section class="section">
         <div class="container">
           <ul class="categories"></ul>
+
           <ul class="products"></ul>
+
           <div class="not-found">
             <div class="not-found__icon">
               <svg
